@@ -1,0 +1,16 @@
+application: cll-ace
+version: 3
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /Resource
+  static_dir: Resource
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
